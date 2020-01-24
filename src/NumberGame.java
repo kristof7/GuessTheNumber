@@ -17,18 +17,16 @@ public class NumberGame {
             int guess = scanner.nextInt();// 4. zapiszemy 3. w zmiennej o nazwie zgadnij, bierze to co wpisujesz i konwertuje w liczbe calkowite
 
             if (randomNumber < guess) {
-                System.out.println("It's smaller than " + guess + " guess."); //5. Informujemy jesli wylosowana licznba byla mniejsza niz wybor uzytkownika "guess"
+                System.out.println("It's smaller than " + guess + " guess."); //5. Informujemy jesli wylosowana liczba byla mniejsza niz wybor uzytkownika "guess"
             }
 
-            if (randomNumber > guess) {
+            else if (randomNumber > guess) {
                 System.out.println("It's grater than "+guess+" guess");
             }
-            if (randomNumber == guess) {
+            else if (randomNumber == guess) {
                 hasWon = true;                //7. Warunek dla wygranej
                 break;
             }
-//            System.out.println("Your guess was :" +guess);
-
 
         }
 
@@ -36,10 +34,7 @@ public class NumberGame {
             System.out.println("CORRECT... YOU WIN!!!");
         } else {
             System.out.println("GAME OVER... YOU LOSE!!!");
-            System.out.println("The number was : " + randomNumber);  //8. Komunikat w przypadku wygranej/rzegranej
+            System.out.println("The number was : " + randomNumber);  //8. Komunikat w przypadku wygranej/przegranej
         }
-
-
-
     }
 }
